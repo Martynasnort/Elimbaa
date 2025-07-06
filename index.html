@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eLimba Parduotuvė</title>
+<link rel="icon" type="image/png" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="eLimba" class="logo">
+  <h1>Sveiki atvykę į eLimba parduotuvę!</h1>
+</header>
+
+<section class="products" id="productList">
+  <div class="product">
+    <img src="img/ausines.jpg" alt="Ausinės">
+    <h2>Ausinės</h2>
+    <p>Kokybiškas garsas</p>
+    <span class="price">29.99€</span>
+    <button onclick="addToCart('Ausinės', 29.99)">Į krepšelį</button>
+  </div>
+  <div class="product">
+    <img src="img/laikrodis.jpg" alt="Laikrodis">
+    <h2>Laikrodis</h2>
+    <p>Stilingas dizainas</p>
+    <span class="price">59.99€</span>
+    <button onclick="addToCart('Laikrodis', 59.99)">Į krepšelį</button>
+  </div>
+  <div class="product">
+    <img src="img/puodelis.jpg" alt="Puodelis">
+    <h2>Puodelis</h2>
+    <p>Puikus rytui</p>
+    <span class="price">9.99€</span>
+    <button onclick="addToCart('Puodelis', 9.99)">Į krepšelį</button>
+  </div>
+  <div class="product">
+    <img src="img/kuprine.jpg" alt="Kuprinė">
+    <h2>Kuprinė</h2>
+    <p>Talpi ir patogi</p>
+    <span class="price">39.99€</span>
+    <button onclick="addToCart('Kuprinė', 39.99)">Į krepšelį</button>
+  </div>
+</section>
+
+<section class="cart">
+  <h2>Jūsų krepšelis</h2>
+  <ul id="cartItems"></ul>
+  <p>Bendra suma: <span id="total">0.00</span>€</p>
+</section>
+
+<section class="order">
+  <h2>Užsakymo forma</h2>
+  <form id="orderForm" onsubmit="sendOrder(event)">
+    <input type="text" name="vardas" placeholder="Vardas" required>
+    <input type="email" name="email" placeholder="El. paštas" required>
+    <button type="submit">Siųsti užsakymą</button>
+  </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
